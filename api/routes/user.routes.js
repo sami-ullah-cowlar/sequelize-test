@@ -4,7 +4,8 @@ const router = express.Router()
 
 
 
-router.route('/')
+router
+.route('/asdasd')
     .get((req, res) => {
         res.json({"msg": "User Route GET Hit "})
     })

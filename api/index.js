@@ -26,13 +26,13 @@ const sequelizeOptions = {
 }
 
 const sequelize = new Sequelize(dbName, user, password, sequelizeOptions) 
-const User = UserModel(sequelize, Sequelize)
+const User = UserModel(sequelize)
 sequelize
 .sync()
 .then(() => console.log("Db Connected"))
 
 // Routes
-app.use('/', routes)
+app.use('/v1', routes)
 
 // initiate Server
 app.listen(4000, () => console.log("Server Running \n http://localhost:4000"))
