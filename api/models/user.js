@@ -9,11 +9,11 @@ module.exports = (sequelize, type) => {
         last_name: type.STRING,
         email: type.STRING,
         username: {
-            type: STRING,
+            type: type.STRING,
             allowNull: false
         },
         password: {
-            type: STRING,
+            type: type.STRING,
             allowNull: false
         }
     }) 
